@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--MainVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainVC" customModule="answerball" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Shake the phone to get the answer." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vzt-VV-2Hm">
+                                <rect key="frame" x="0.0" y="0.0" width="270" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ball" translatesAutoresizingMaskIntoConstraints="NO" id="XbI-La-btx">
+                                <rect key="frame" x="138" y="137" width="325" height="325"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="325" id="mY1-Hw-xT7"/>
+                                    <constraint firstAttribute="height" constant="325" id="v3n-Uj-tbx"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U8n-Xt-goM">
+                                <rect key="frame" x="260" y="550" width="80" height="30"/>
+                                <state key="normal" title="Get Answer">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="getAnswerTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wwd-HT-pSy"/>
+                                </connections>
+                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iDJ-7l-FQ3">
+                                <rect key="frame" x="197" y="204" width="223" height="191"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="191" id="2UM-7O-aL1"/>
+                                    <constraint firstAttribute="width" constant="223" id="vga-Ci-HQd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="highlightedColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="shadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <size key="shadowOffset" width="2" height="2"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.69667998080614146" green="0.00040475297271902466" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="U8n-Xt-goM" secondAttribute="bottom" constant="20" symbolic="YES" id="GGE-t5-a3W"/>
+                            <constraint firstItem="iDJ-7l-FQ3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Nkt-2R-7Dm"/>
+                            <constraint firstItem="XbI-La-btx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UaT-F8-0fS"/>
+                            <constraint firstItem="iDJ-7l-FQ3" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="VdS-Pd-JyV"/>
+                            <constraint firstItem="XbI-La-btx" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="hrG-zl-ggJ"/>
+                            <constraint firstItem="U8n-Xt-goM" firstAttribute="centerX" secondItem="iDJ-7l-FQ3" secondAttribute="centerX" id="vov-6n-bjJ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="answerText" destination="iDJ-7l-FQ3" id="GDz-jT-Z7c"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="438" y="157"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ball" width="345" height="345"/>
+    </resources>
+</document>
